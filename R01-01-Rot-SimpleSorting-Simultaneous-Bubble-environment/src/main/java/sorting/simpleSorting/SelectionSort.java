@@ -11,7 +11,15 @@ public class SelectionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not Implemented yet!");
+		for(int i = leftIndex; i < rightIndex; i++) {
+			int minimo = i;
+			
+			for(int j = i + 1; j <= rightIndex; j++) {
+				if(array[minimo].compareTo(array[j]) > 0) {
+					minimo = j;
+				}
+			}
+			util.Util.swap(array, i, minimo);
+		}
 	}
 }

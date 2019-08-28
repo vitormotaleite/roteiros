@@ -14,7 +14,22 @@ import sorting.AbstractSorting;
 public class SimultaneousBubblesort<T extends Comparable<T>> extends
 		AbstractSorting<T> {
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		int comeco = leftIndex;
+		int fim = rightIndex;
+		
+		if (comeco < rightIndex) {
+			if(array[comeco].compareTo(array[comeco + 1]) > 0) {
+				util.Util.swap(array, comeco, comeco + 1);
+			}
+			comeco++;
+			sort(array, comeco, rightIndex);
+		}
+		if(fim > leftIndex) {
+			if(array[fim].compareTo(array[fim - 1]) < 0) {
+				util.Util.swap(array, fim, fim - 1);
+			}
+			fim--;
+			sort(array, leftIndex, fim);
+		}
 	}
 }
