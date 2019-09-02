@@ -37,7 +37,7 @@ public class CountingSort extends AbstractSorting<Integer> {
 		}
 		
 		for(int k = leftIndex; k < rightIndex; k++) {
-			array2[array[k]] = array2[array[k]] + 1;
+			array2[array[k]] += 1 ;
 		}
 		
 		for(int z = 0; z < array2.length; z++) {
