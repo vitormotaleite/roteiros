@@ -17,12 +17,12 @@ public class QuickSort<T extends Comparable<T>> extends AbstractSorting<T> {
 		if (leftIndex < rightIndex) {
 			int i = leftIndex;
 			int j = rightIndex;
-			T x = array[(i + j) / 2];
+			T pivot = array[(i + j) / 2];
 			do {
-		        while (array[i].compareTo(x) < 0) {
+		        while (array[i].compareTo(pivot) < 0) {
 		        	i++;
 		        }
-		        while (x.compareTo(array[j]) < 0) {
+		        while (pivot.compareTo(array[j]) < 0) {
 		        	j--;
 		        }
 

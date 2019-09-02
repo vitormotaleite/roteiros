@@ -1,3 +1,39 @@
-<html><body><h1>504 Gateway Time-out</h1>
-The server didn't respond in time.
-</body></html>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-08-29T14:19:56.058-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 150.165.42.143 at 29-08-2019 14*19*56</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-08-29T14:30:08.744-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 150.165.42.143 at 29-08-2019 14*30*08</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-08-29T22:00:14.578-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 29-08-2019 22*00*14</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-08-29T22:02:16.043-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 29-08-2019 22*02*16</message>
+</record>

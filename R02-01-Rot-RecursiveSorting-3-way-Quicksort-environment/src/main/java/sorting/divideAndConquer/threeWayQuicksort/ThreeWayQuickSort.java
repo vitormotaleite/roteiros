@@ -25,8 +25,50 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends
 	 **/
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		boolean validacao = validacaoDeEntrada(array, leftIndex, rightIndex);
+
+		if (validacao) {
+
+			int comeco = leftIndex;
+			int fim = rightIndex;
+			int index = leftIndex + 1;
+
+			int pivot = leftIndex;
+			T valorPivot = array[pivot];
+
+			while (index <= fim) {
+
+				if (array[index].compareTo(valorPivot) < 0) {
+					util.Util.swap(array, index, comeco);
+					comeco++;
+					index++;
+				} else if (valorPivot.compareTo(array[index]) < 0) {
+					util.Util.swap(array, index, fim);
+					fim--;
+				} else {
+					index++;
+				}
+			}
+
+			sort(array, leftIndex, comeco - 1);
+			sort(array, fim + 1, rightIndex);
+		}
+
 	}
 
+	private boolean validacaoDeEntrada(T[] array, int leftIndex, int rightIndex) {
+
+		if (array == null)
+			return false;
+		if (array.length == 0)
+			return false;
+		if (leftIndex < 0 || rightIndex < 0)
+			return false;
+		if (leftIndex >= rightIndex)
+			return false;
+		if (rightIndex >= array.length)
+			return false;
+
+		return true;
+	}
 }
