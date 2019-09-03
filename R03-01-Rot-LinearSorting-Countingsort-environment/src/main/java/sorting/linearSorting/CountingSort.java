@@ -12,42 +12,36 @@ public class CountingSort extends AbstractSorting<Integer> {
 
 	@Override
 	public void sort(Integer[] array, int leftIndex, int rightIndex) {
-		
-		Integer[] arrayOrdenado = new Integer[array.length];
-		
-		for(int l = 0; l < arrayOrdenado.length; l++) {
-			arrayOrdenado[l] = 0;
-		}
-		
-		int maior = Integer.MAX_VALUE;
-		int menor = Integer.MIN_VALUE;
-		
-		for (int j = leftIndex; j < rightIndex; j++) {
+		 
+		int maior = 0;
+		for (int j = leftIndex; j < rightIndex + 1; j++) {
 			if (array[j] > maior) {
 				maior = array[j];
 			}
-			if (array[j] < menor) {
-				menor = array[j];
-			}
 		}
-		Integer[] array2 = new Integer[(maior - menor) + 1];
-		
+		Integer[] array2 = new Integer[maior + 1];
+			
 		for(int i = 0; i < array2.length; i++) {
 			array2[i] = 0;
 		}
-		
-		for(int k = leftIndex; k < rightIndex; k++) {
+			
+		for(int k = 0; k < rightIndex + 1; k++) {
 			array2[array[k]] += 1 ;
 		}
-		
-		for(int z = 0; z < array2.length; z++) {
-			array2[z + 1] += array2[z];
+			
+		for(int z = 1; z < array2.length; z++) {
+			array2[z] += array2[z - 1];
 		}
-		
-		for(int x = rightIndex; x > leftIndex; x--) {
+			
+		Integer[] arrayOrdenado = new Integer[array.length];
+			
+		for(int x = rightIndex; x >= 0; x--) {
+			arrayOrdenado[array2[array[x]] - 1] = array[x];
 			array2[array[x]] -= 1;
-			arrayOrdenado[array2[array[x]]] = array[x];
+		}
+			
+		for (int i = 0; i < array.length; i++) {
+			array[i] = arrayOrdenado[i];
 		}
 	}
-
 }
