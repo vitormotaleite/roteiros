@@ -12,17 +12,58 @@ package problems;
  *
  */
 public class FloorCeilBinarySearch implements FloorCeil {
-
+	
 	@Override
 	public Integer floor(Integer[] array, Integer x) {
-		// TODO implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		
+		Integer floor = null;
+		int inicio,fim;
+		int meio; 
+		inicio = 0;
+		fim = array.length - 1;
+		 
+		while(inicio <= fim){
+		  
+			meio = (inicio + fim) / 2;
+		  
+			if(array[meio] == x) {
+				return array[meio];
+			}
+			else if(array[meio] > x){
+				fim = meio - 1;
+			}
+			else {
+				floor = array[meio];
+				inicio = meio + 1;
+			}
+		}
+		return floor;
 	}
 
 	@Override
 	public Integer ceil(Integer[] array, Integer x) {
-		// TODO implement your code here
-		throw new UnsupportedOperationException("Not implemented yet!");
+		
+		Integer ceil = null;
+		int inicio,fim;
+		int meio;
+		inicio = 0;
+		fim = array.length - 1;
+		 
+		while(inicio <= fim){
+		  
+			meio = (inicio + fim) / 2;
+		  
+			if(array[meio] == x) {
+				return array[meio];
+			}
+			else if(array[meio] > x){
+				ceil = array[meio];
+				fim = meio - 1;
+			}
+			else {
+				inicio = meio + 1;
+			}
+		}
+		return ceil;
 	}
-
 }
