@@ -13,22 +13,21 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public T top() {
-		if(array != null && array.length > 0) {
-			for(int i = 0; i < array.length; i++) {
-				if((array[i]).equals(top)) {
-					return array[i];
-				}
-			}
+		if(isEmpty()) {
+			return null;
 		}
-		return null;
+		else {
+			return array[top];	
+		}
 	}
 
 	@Override
 	public boolean isEmpty() {
-		if (array == null) {
-			return true;
+		boolean retorno = false;
+		if (top < 0) {
+			retorno = true;
 		}
-		return false;
+		return retorno;
 	}
 
 	@Override
