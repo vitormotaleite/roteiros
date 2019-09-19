@@ -32,28 +32,32 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public boolean isFull() {
-		int tamanho = 0;
-		for (int i = 0; i < array.length; i++) {
-			if(array[i] != null) {
-				tamanho += 1;
-			}
+		boolean retorno = false;
+		if(top == array.length - 1) {
+			retorno = true;
 		}
-		if (tamanho == array.length) {
-			return true;
-		}
-		return false;
+		return retorno;
 	}
 
 	@Override
 	public void push(T element) throws StackOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if(isFull()) {
+			throw new StackOverflowException();
+		}
+		else if(element != null){
+			top += 1;
+			this.array[top] = element;
+		}
 	}
 
 	@Override
 	public T pop() throws StackUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if(isEmpty()) {
+			throw new StackUnderflowException();
+		}
+		else {
+			return this.array[top--];
+		}
 	}
 
 }
