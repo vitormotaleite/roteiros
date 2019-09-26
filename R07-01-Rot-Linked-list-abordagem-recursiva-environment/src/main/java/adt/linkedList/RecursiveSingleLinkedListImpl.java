@@ -8,6 +8,11 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 	public RecursiveSingleLinkedListImpl() {
 
 	}
+	
+	public RecursiveSingleLinkedListImpl(T data, RecursiveSingleLinkedListImpl<T> next) {
+		this.data = data;
+		this.next = next;
+	}
 
 
 	@Override
@@ -37,7 +42,7 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 		}
 		else {
 			if(this.data == element) {
-				return data;
+				return this.data;
 			}
 			else {
 				return this.next.search(element);
