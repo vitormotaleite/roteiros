@@ -15,32 +15,53 @@ public class StackRecursiveDoubleLinkedListImpl<T> implements Stack<T> {
 
 	@Override
 	public void push(T element) throws StackOverflowException {
-		// TODO Implement the method
-		throw new UnsupportedOperationException("Method not implemented");
+		if (element != null) {
+			if (this.size >= 0 && !isFull()) {
+				((RecursiveDoubleLinkedListImpl<T>) this.top).insert(element);
+			} else {
+				throw new StackOverflowException();
+			}
+		}
 	}
 
 	@Override
 	public T pop() throws StackUnderflowException {
-		// TODO Implement the method
-		throw new UnsupportedOperationException("Method not implemented");
+		T pop = null;
+		if (this.size >= 0 && !this.top.isEmpty()) {
+			pop = top();
+			top.removeLast();
+		} else {
+			throw new StackUnderflowException();
+		}
+		if (pop == null) {
+			throw new StackUnderflowException();
+		}
+		return pop;
 	}
 
 	@Override
 	public T top() {
-		// TODO Implement the method
-		throw new UnsupportedOperationException("Method not implemented");
+		if (this.size >= 0 && this.top.isEmpty()) {
+			return null;
+		}
+		return top((RecursiveDoubleLinkedListImpl<T>) this.top);
+	}
+
+	public T top(RecursiveDoubleLinkedListImpl<T> tmp) {
+		if (tmp.getNext().isEmpty()) {
+			return tmp.getData();
+		}
+		return top((RecursiveDoubleLinkedListImpl<T>) tmp.getNext());
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Implement the method
-		throw new UnsupportedOperationException("Method not implemented");
+		return ((RecursiveDoubleLinkedListImpl<T>) this.top).isEmpty();
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Implement the method
-		throw new UnsupportedOperationException("Method not implemented");
+		return this.size == ((RecursiveDoubleLinkedListImpl<T>) this.top).size();
 	}
 
 }

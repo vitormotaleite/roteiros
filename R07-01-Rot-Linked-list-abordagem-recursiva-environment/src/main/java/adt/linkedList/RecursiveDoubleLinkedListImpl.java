@@ -17,17 +17,15 @@ public class RecursiveDoubleLinkedListImpl<T> extends
 	
 	@Override
 	public void insert(T element) {
-		if(isEmpty()) {
-			this.data = element;
-			RecursiveDoubleLinkedListImpl<T> nil = new RecursiveDoubleLinkedListImpl<>();
-			nil.previous = this;
-			this.next = nil;
-		}
-		if(this.previous == null) {
-			this.previous = new RecursiveDoubleLinkedListImpl<>();
-		}
-		else {
-			this.next.insert(element);
+		if (element != null) {
+			if (isEmpty()) {
+				RecursiveDoubleLinkedListImpl<T> tmp = new RecursiveDoubleLinkedListImpl<T>();
+				tmp.previous = this;
+				this.next = tmp;
+				this.data = element;
+			} else {
+				this.getNext().insert(element);
+			}
 		}
 	}
 	
@@ -39,32 +37,6 @@ public class RecursiveDoubleLinkedListImpl<T> extends
 		old.previous = this;
 		this.data = element;
 		this.next = old;
-	}
-	
-	@Override
-	public void remove(T element) {
-		if(isEmpty()) {
-			return;
-		}
-		else {
-			if(this.data == element) {
-				if(this.previous.isEmpty() && this.next.isEmpty()) {
-					this.data = null;
-					this.next = null;
-					this.previous = null;
-				}
-				else {
-					data = next.getData();
-					next = next.next;
-					if(next != null) {
-						((RecursiveDoubleLinkedListImpl<T>)this.next).previous = null;
-					}
-				}
-			}
-			else {
-				next.remove(element);
-			}
-		}
 	}
 
 	@Override
@@ -78,12 +50,13 @@ public class RecursiveDoubleLinkedListImpl<T> extends
 
 	@Override
 	public void removeLast() {
-		if(!isEmpty()) {
-			if(this.next.isEmpty()) {
-				this.previous.next = new RecursiveDoubleLinkedListImpl<>();
-			}
-			else {
-				((RecursiveDoubleLinkedListImpl<T>)this.next).removeLast();
+		if (!isEmpty()) {
+			if (this.getNext().isEmpty()) {
+				this.next = null;
+				this.data = null;
+				this.previous = null;
+			} else {
+				((RecursiveDoubleLinkedListImpl<T>) this.getNext()).removeLast();
 			}
 		}
 	}
