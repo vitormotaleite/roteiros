@@ -32,7 +32,6 @@ public class HashtableClosedAddressImpl<T> extends
 	 * @param method
 	 */
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public HashtableClosedAddressImpl(int desiredSize,
 			HashFunctionClosedAddressMethod method) {
 		int realSize = desiredSize;
