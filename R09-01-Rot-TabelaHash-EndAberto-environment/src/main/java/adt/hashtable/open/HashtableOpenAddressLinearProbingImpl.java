@@ -12,28 +12,76 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable> extends
 		hashFunction = new HashFunctionLinearProbing<T>(size, method);
 		this.initiateInternalTable(size);
 	}
+	
+	private int calculaPosicao(T element, int probe) {
+		return ((HashFunctionLinearProbing<T>) hashFunction).hash(element, probe);
+
+	}
 
 	@Override
 	public void insert(T element) {
-		//me sentindo um idiota no meio de tanta gente inteligente.
+		if (element != null && search(element) == null) {
+
+			if (this.isFull()) {
+				throw new HashtableOverflowException();
+			} else {
+				int probe = 0;
+
+				int posicao = calculaPosicao(element, probe);
+
+				while (this.table[posicao] != null && !this.table[posicao].equals(new DELETED())) {
+					probe++;
+					this.COLLISIONS++;
+					posicao = calculaPosicao(element, probe);
+				}
+
+				this.table[posicao] = element;
+				this.elements++;
+			}
+		}
 	}
 
 	@Override
 	public void remove(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (element != null) {
+			int index = indexOf(element);
+			if (index != -1) {
+				this.table[index] = new DELETED();
+				elements--;
+			}
+
+		}
 	}
 
 	@Override
 	public T search(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		T saida = null;
+		if (element != null && indexOf(element) != -1) {
+			saida = element;
+
+		}
+
+		return saida;
 	}
 
 	@Override
 	public int indexOf(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (element != null && !this.isEmpty()) {
+			int probe = 0;
+			int posicao = calculaPosicao(element, probe);
+
+			while (this.table[posicao] != null && probe < this.capacity()) {
+				if (this.table[posicao].equals(element)) {
+					return posicao;
+				} else {
+					probe++;
+					posicao = calculaPosicao(element, probe);
+
+				}
+			}
+
+		}
+		return -1;
 	}
 
 }
