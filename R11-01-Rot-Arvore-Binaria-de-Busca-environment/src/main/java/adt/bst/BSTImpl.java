@@ -19,8 +19,11 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	@Override
 	public int height() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		int resultado = -1;
+		if (!isEmpty()) {
+			resultado = 1;
+		}
+		return resultado;
 	}
 
 	@Override
