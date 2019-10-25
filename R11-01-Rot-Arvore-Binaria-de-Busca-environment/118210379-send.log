@@ -7,3 +7,23 @@
   <level>FINE</level>
   <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 150.165.42.142 at 21-10-2019 16*19*57</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-10-22T18:33:31.289-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 22-10-2019 18*33*31</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-10-22T18:56:51.141-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 22-10-2019 18*56*51</message>
+</record>
