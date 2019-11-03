@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-10-31T14:11:52.635-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 150.165.42.131 at 31-10-2019 14*11*52</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-01T18:49:06.696-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 01-11-2019 18*49*06</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-02T13:26:30.202-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 02-11-2019 13*26*30</message>
+</record>
