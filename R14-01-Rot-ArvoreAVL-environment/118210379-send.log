@@ -7,3 +7,43 @@
   <level>FINE</level>
   <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 150.165.42.142 at 04-11-2019 16*12*11</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-05T21:09:51.915-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 05-11-2019 21*09*51</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-06T13:04:18.651-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 06-11-2019 13*04*18</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-06T13:40:03.737-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 06-11-2019 13*40*03</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-06T14:04:52.128-0300</date>
+  <logger>VITOR MOTA LEITE DINIZ</logger>
+  <level>FINE</level>
+  <message>File 118210379-VITOR MOTA LEITE DINIZ.zip was received. It was sent by VITOR MOTA LEITE DINIZ from IP 192.168.0.68 at 06-11-2019 14*04*52</message>
+</record>
